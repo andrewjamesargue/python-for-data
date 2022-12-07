@@ -11,7 +11,7 @@ Follow this link to download Python version 3.11:
 https://www.python.org/downloads/
 
 ## Install Python extension for VS Code
-![Extensions in VS Code](extensions-view-filter-menu.png "Search for Python")
+![Extensions in VS Code](images/extensions-view-filter-menu.png "Search for Python")
 
 ## Open a Terminal window
 In the menu bar select the following drop-down menus:
