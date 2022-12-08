@@ -1,5 +1,31 @@
+# %%
 import random
+import csv
 
+ch1_terms = []
+
+with open("../sample_data/quiz_terms.csv") as term_file:
+    reader_object = csv.reader(term_file)
+    for term in reader_object:
+        ch1_terms.append(term[0])
+term_file.close()
+
+print(ch1_terms)
+
+# %%
+import random
+import csv
+
+ch1_answers=[]
+
+with open("../sample_data/quiz_answers.csv") as answer_file:
+    reader_object = csv.reader(answer_file)
+    for ans in reader_object:
+        ch1_answers.append(ans[0])
+term_file.close()
+print(ch1_answers)
+
+# %%
 def doQuiz(number_of_questions):
 
     score = 0
@@ -30,11 +56,12 @@ def doQuiz(number_of_questions):
         answer_array = []
         ch1_range = range(len(ch1_terms))
         term_num = random.choice(ch1_range)
+        
         term = ch1_terms[term_num]
         right_answer = ch1_answers[term_num]
-
         ch1_answers.remove(ch1_answers[term_num])
         random.shuffle(ch1_answers)
+        
         answer_array.append(right_answer)
         answer_array.append(ch1_answers[0])
         answer_array.append(ch1_answers[1])
@@ -64,7 +91,9 @@ def doQuiz(number_of_questions):
     
     return score
 
+# %%
+
 number_of_questions = input("How many questions do you want?")
 correct_answers = doQuiz(number_of_questions)
 
-print(f"You got {correct_answers}/{number_of_questions}")
+print(f"You answered {correct_answers}/{number_of_questions} correctly")

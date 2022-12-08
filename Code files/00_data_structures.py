@@ -22,7 +22,6 @@ list_of_lists = [list1,list2]
 
 print(list_of_lists)
 
-
 # %%
 my_dict = {"bob": 1, 
             "alice": 2, 
