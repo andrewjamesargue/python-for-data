@@ -6,7 +6,7 @@ This readme and the other files in this repository are written in **[Markdown](h
 
 The folder called "Installation instructions" contains a step-by-step guide to install VS Code for either macOS or Windows
 
-The folder called "Code files" contains python files used in the presentation
+The folder called "Code files" contains the python files used in the presentation
 
 
 
